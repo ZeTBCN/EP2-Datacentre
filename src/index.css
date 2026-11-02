@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #181C24;
+    color: #C8D0DC;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes flowDashForward {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+
+@keyframes flowDashReverse {
+  to {
+    stroke-dashoffset: 48;
+  }
+}
+
+.animate-flow-fast {
+  animation: flowDashForward 1.1s linear infinite;
+}
+
+.animate-flow-medium {
+  animation: flowDashForward 1.8s linear infinite;
+}
+
+.animate-flow-slow {
+  animation: flowDashForward 2.8s linear infinite;
+}
+
+.animate-flow-reverse {
+  animation: flowDashReverse 1.8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-flow-fast,
+  .animate-flow-medium,
+  .animate-flow-slow,
+  .animate-flow-reverse {
+    animation: none;
+  }
+}

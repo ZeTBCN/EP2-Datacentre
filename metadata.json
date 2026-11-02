@@ -1,0 +1,6 @@
+{
+  "name": "ThermoVault 2045 — Subterranean Data Centre & 5GDHC Interactive Schematic",
+  "description": "Interactive animated engineering infographic and thermodynamic flow schematic for a 2045 subterranean data centre waste-heat recovery, 5GDHC network, high-temperature heat pump, and rainwater thermal regulation urban district.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
